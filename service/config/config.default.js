@@ -22,15 +22,22 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 7002,
+      hostname: '0.0.0.0',
+    }
+  };
   config.mysql = {
     // database configuration
     client: {
       // host
-      host: 'localhost',
+      host: '127.0.0.1',
       // port
       port: '3306',
       // username
-      user: 'root',
+      user: 'fh',
       // password
       password: 'flfl0408',
       // database
@@ -47,7 +54,7 @@ module.exports = appInfo => {
     domainWhiteList: ['*']
   };
   config.cors = {
-    origin: 'http://localhost:3000',
+    origin: 'http://121.43.150.32:85',
     credentials: true,  //允许Cook可以跨域
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
   };
